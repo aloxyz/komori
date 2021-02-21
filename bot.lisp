@@ -15,7 +15,7 @@
     (if (eq (caar alke) :html) (cl-ppcre:regex-replace-all "<.*?>|&.*?;" (assoc (car alke)) " "))
     (cl-ppcre:regex-replace-all "<.*?>|&.*?;" content " ")))
 
-(let ((mkbot (make-bot "226836560:AAGsWI1SqHSmHVPUSeA9MDR9e1HXtGqgwoA")))
+(let ((mkbot (make-bot "token")))
   (loop
      (loop for update across (get-updates mkbot) do
 	  (let* ((message (access update 'message))
